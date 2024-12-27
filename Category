@@ -1,0 +1,406 @@
+---
+category:
+    shop_by_price: true
+    products:
+        limit: {{theme_settings.categorypage_products_per_page}}
+---
+{{inject "categoryProductsPerPage" theme_settings.categorypage_products_per_page}}
+{{#partial "head"}}
+    {{#if pagination.category.previous}} 
+        <link rel="prev" href="{{pagination.category.previous}}">    
+    {{/if}}
+    {{#if pagination.category.next}}
+        <link rel="next" href="{{pagination.category.next}}">
+    {{/if}}
+{{/partial}}
+     
+{{#partial "page"}}       
+
+<div class="page page--category container-page-category">
+    
+		{{#if category.description}}  
+		
+			<div class="category-description">Check out our "Item of the Week". On sale through Friday at midnight.</div>
+		{{/if}}
+	
+		<section class="page-content container container-top-title">
+        {{!--{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}--}}
+        {{#unless theme_settings.hide_category_page_heading }}  
+            <h1 class="page-heading">{{category.name}}</h1>
+            {{{region name="category_below_header"}}}
+        {{/unless}}
+        {{{category.description}}}
+        {{#if theme_settings.show_subcategories}}
+            {{#if category.subcategories}}
+                <div class="sidebarBlock page-content-subcategories">
+                    <h5 class="sidebarBlock-heading">Subcategories:</h5>
+                    <ul class="navList">
+                        {{#each category.subcategories}}
+                        <li class="navList-item">
+                            <a class="navList-action" href="{{url}}" alt="{{name}}" title="{{name}}">
+                                <div class="image-wrap{{#unless image}} image-placeholder{{/unless}}">
+                                {{#if image}}
+                                    <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image}}" alt="{{image.alt}}" title="{{image.alt}}">
+                                {{else}}
+                                    <img class="lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{cdn 'assets/img/BrandDefault.gif'}}" alt="{{image.alt}}" title="{{image.alt}}">
+                                {{/if}}
+                                </div>
+                                <span>{{name}}</span>
+                            </a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/if}}
+        {{/if}}
+    </section>
+    
+    <div class="main full grid-bg">
+        <div class="container category-container">
+
+            {{#if category.faceted_search_enabled}}
+                <aside class="page-sidebar" id="faceted-search-container">
+                    {{> components/category/sidebar}}
+                </aside>
+            {{else if category.subcategories}}
+                <aside class="page-sidebar" id="faceted-search-container">
+                    {{> components/category/sidebar}}
+                </aside>
+            {{else if category.shop_by_price}}
+                {{#if theme_settings.shop_by_price_visibility}}
+                     <aside class="page-sidebar" id="faceted-search-container">  
+                        {{> components/category/sidebar}}
+                    </aside>
+                {{/if}}
+            {{/if}}
+        
+            <main class="page-content" id="product-listing-container">
+                <h1 class="page-heading">{{category.name}}</h1>
+								{{#if category.products}}
+                    {{> components/category/product-listing}}
+                {{else}}
+                    <p></p>   
+                    <!--{{lang 'categories.no_products'}}-->
+                {{/if}}
+                {{{region name="category_below_content"}}}
+               
+            </main>
+            
+         
+                
+                   
+                      
+           
+                
+                
+        <!-- -------------- 21/12/2024  -------- 
+        👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿
+                      uncomment and live this section
+        -->          
+                
+                
+                    <section class="tellason-cate-desc" id="special-category-section">
+                    <div class="mx-wid-view">
+                        <div class="tellaImageContent">
+                            <a href="/item-of-the-week/" target="_blank">
+                                <img align="center" alt="" src="https://mcusercontent.com/88db88d200f61078cca5ab9dd/images/eca98640-f7d3-d29f-d96d-672c10900fb9.jpeg" width="528" class="tellaImage" />
+                            </a>
+                        </div>
+                        <div class="tella_cate_content"> 
+                            <p>
+Early 90's -  I was playing a ton of beach volleyball and played in tournaments with this dude named Pat Breenan from Santa Cruz.  He was the life of the party and a great player that, on occasion, would punt the ball a mile into the air when things were going poorly.  The nutty thing was that the ball always landed back on our court.  
+
+                            </p>
+     <p>Once we played in a tournament on the shores of Lake Tahoe.  What a scene - snow capped mountains, pine trees everywhere and a freshwater lake to swim in.  We drove his 1972 VW, orange and white van to the mountains.  Top speed was about 59 mph.  It was my turn to drive and the roads were empty.  I did not think much about it but I was in the fast lane, and some cat came in hot and was about a foot off our back bumper.  I quickly signaled and switched to the slow lane.  That was not enough for this guy.  He pulled up in his convertible Mustang and let me have it.  His instructions were to pull over so he could kick both our butts.  </p>
+     
+     <p>I let him know that we were not going to do that and he should chill out and accept my apology for driving in the wrong lane.  He sped off with his neck veins still visible and that was that.  Pat and I scratched our heads and drove on.  Twenty minutes later, angry guy slowed way down and was now right next to us, driving 59 mph.  He instructed me to open my window and at that point, delivered a sincere apology that came from the heart.  We accepted and here I am writing about that apology 33 years later.</p>
+     
+     <p>Now, our slim straight Ladbroke Grove fit, unlike Mustang dude, needs no apology.  We are going on our 16th year and this fit has been with us almost the whole ride.  Perfectly slim without being too slim.  Perfectly tapered without being too tapered.  This gem of ours looks dashing on slim lads like us, and the huskier fellas that love good food or gym memberships.  </p>
+     
+     
+                          <p>
+          This 14.75 oz. proprietary fabric has a deep indigo tone that fades beautifully with proper wear.  We are stocked up and very happy to offer this as our "<a href="#" style="color: #ed5a2e;">Item of the Week</a>".  Yours with a 20% discount...
+</p>
+
+                         <p>Sincerely,</p>
+
+                        
+
+                            <p>
+                               
+                               Tony Patella <br />
+                               Pete Searson <br/>
+                               Tellason
+        
+                            </p>
+                
+                            <p style="text-align: center;"> 
+                                <a href="/item-of-the-week/" class="shop_btn">Shop Now & Save 20%</a>
+                            </p>
+                
+                            <p style="text-align: center;">(sale ends Friday, December 27th @11:59pm)</p>
+                
+                            <div class="tellaImageContent">
+                                <iframe src="https://player.vimeo.com/video/1040138073" width="100%" height="750" frameborder="0" allowfullscreen></iframe>
+                                <p style="color: #f54a3a;">
+          Watch our video featuring Pete and our Item of the Week.  Pete’s 6’4”, 185lbs, and wearing a size 34.  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                 </section>  
+          
+              
+                
+                
+              
+                <!--    <section class="tellason-cate-desc" id="special-category-section">
+                    <div class="mx-wid-view">
+                        <div class="tellaImageContent">
+                            <a href="/item-of-the-week/" target="_blank">
+                                <img align="center" alt="" src="https://mcusercontent.com/88db88d200f61078cca5ab9dd/images/6b371fd5-c102-6957-d581-0ab95fda5c10.jpeg" width="528" class="tellaImage" />
+                            </a>
+                        </div>
+                        <div class="tella_cate_content"> 
+                            <p>
+Alright ya'll.  Raise your hand if you are sleeping at the wheel with that holiday shopping.  Mine is raised so let's work together and get those special people in our lives sorted out.  
+ 
+
+                            </p>
+      <p>
+ This is the last holiday hurrah so we will offer <a href="https://www.tellason.com/" style="color: #ed5a2e; text-decoration:underline;">20% off site wide</a> and will ship domestic orders over $150, placed by December 17, with an arrival by December 24, based on the published deadlines of our couriers that service Tellason.  
+
+
+
+      </p>
+      <p>With that, happy shopping and enjoy your holiday!</p>
+      
+           
+
+                         <p>Best from HQ,</p>
+
+                        
+
+                            <p>
+                               
+                               Tony Patella <br />
+                               Pete Searson <br/>
+                               Tellason
+        
+                            </p>
+                
+                            <p style="text-align: center;"> 
+                                <a href="/item-of-the-week/" class="shop_btn">Shop Now & Save 20%</a>
+                            </p>
+                
+                            <p style="text-align: center;">(sale ends Friday, December 20th @11:59pm)
+
+
+</p>
+                
+                            <div class="tellaImageContent">
+                                <iframe src="https://player.vimeo.com/video/1038351801" width="100%" height="750" frameborder="0" allowfullscreen></iframe>
+                                <p style="color: #f54a3a;">
+      Watch our video featuring Pete announcing our Holiday Sale.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                 </section> -->
+               
+              
+                
+                
+                
+                
+                
+                
+                
+                
+                      
+                                  	  
+        </div>
+    </div>
+</div>   
+        	  
+
+
+{{/partial}}
+{{> layout/base}}
+`
+
+     <style>
+     
+     /* cate Content Description */
+    
+            .mx-wid-view {
+                max-width: 580px;
+                margin: 0 auto;
+            }
+            
+            .tempTitle{
+                 font-size:45px;
+                 color:black;
+            }
+            
+            @media(max-width:578px){
+                 .tempTitle{
+                     font-size:25px;
+                } 
+            }
+            .mx-wid-view .tellaImageContent {
+            
+                text-align: center;
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+                padding:0;
+            }
+            
+            .mx-wid-view .tellaImageContent a.main-pic {
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
+            }
+            
+            .mx-wid-view .tellaImageContent a.main-pic img {
+                max-width: 450px;
+                vertical-align: bottom;
+                border: 0;
+                height: auto;
+                margin: auto;
+                outline: none;
+                text-decoration: none;
+                padding-bottom: 0;
+                display: block ;
+            }
+            
+            .mx-wid-view .tellaImageContent a.main-pic img.tellaImage.vim-2 {
+                max-width: 400px;
+                margin: auto;
+            }
+
+            /*body{*/
+            /*    background-color: #fff;*/
+            /*    font-family: Source Sans Pro,Arial,sans-serif;*/
+            /*    margin: 0;*/
+            /*    padding: 0;*/
+            /*}*/
+
+            .tella_cate_content p, .tella_cate_content ol li{
+                line-height: 1.6;
+                color: #231f20;
+                font-family: "Work Sans",sans-serif;
+                font-size: 18px;
+            }
+            
+             .tella_cate_content ol {
+                margin-left: 1.5rem;
+            }
+            
+                
+           .tella_cate_content p a.ac_view{
+                color: #ed5a2e;
+                font-weight: normal;
+                text-decoration: underline;
+            }
+               
+            
+            .tella_cate_content p:first-child{
+                margin-top: 20px;
+            }
+            .tella_cate_content a.shop_btn {
+                display: inline-block;
+                 width: 215px;
+                margin: auto;
+                background-color: #f54a3a;
+                text-decoration: none;
+                color: #fff;
+                padding: 10px 0;
+                text-align: center;
+                font-family: "Work Sans",sans-serif;
+                font-size: 16px;
+                text-transform: uppercase;
+                border-radius: 5px;
+            }
+            .tella_cate_content a.shop_btn:hover {
+                background-color: #c41c22;
+            }
+            
+            @media (max-width:768px){
+                .mx-wid-view .tellaImageContent a.main-pic img {
+                    max-width: 320px;
+                    margin: auto;
+                }
+            }
+            
+            .tellaImageContent p{
+                font-size: 15px;
+            }
+            
+        
+            
+            
+        </style>
+
+        <style>
+        
+            aside#faceted-search-container{
+                display: none !important;
+            }
+            
+            main#product-listing-container {
+                width: 100% !important;
+                padding-top: 40px !important;
+            }
+            
+          
+            
+        </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the current page URL
+    var currentURL = window.location.href;
+    console.log("Current URL:", currentURL); // Debugging
+
+    // The specific URL where the section should be displayed
+    var targetURL = "/item-of-the-week/";
+    
+    // Get the section by its ID
+    var specialSection = document.getElementById('special-category-section');
+    if (!specialSection) {
+        console.error("The 'special-category-section' element was not found!"); // Debugging
+        return;
+    }
+ // if (window.location.href.includes(targetURL)) 
+    // Check if the current URL contains the target URL
+    if (currentURL.indexOf(targetURL) !== -1) {
+        console.log("URL Match. Displaying the section."); // Debugging
+        specialSection.style.display = "block";
+    } else {
+        console.log("URL does not match. Hiding the section."); // Debugging
+        specialSection.style.display = "none";
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// my code is here
+
+  
+</script>
+
+
+ 
